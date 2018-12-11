@@ -1,3 +1,4 @@
+// 对象的继承方式
 function Animal(name) {
   // 属性
   this.name = name || 'Animal'
@@ -33,7 +34,7 @@ function Cat(name) {
 // 4.拷贝继承
 function Cat(name) {
   var animal = new Animal()
-  for(var p in animal){
+  for (var p in animal) {
     Cat.prototype[p] = animal[p]
   }
   Cat.prototype.name = name || 'Tom'
@@ -53,7 +54,7 @@ function Cat(name) {
   this.name = name || 'Tom'
 }
 (function () {
-  var Super = function(){}
+  var Super = function () {}
   Super.prototype = Animal.prototype
   Cat.prototype = new Super()
 })()
