@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Angus's Blog",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhixinpeng/Blog.git"
@@ -19,16 +16,26 @@
     "url": "https://github.com/zhixinpeng/Blog/issues"
   },
   "homepage": "https://github.com/zhixinpeng/Blog#readme",
+  "scripts": {
+    "commit": "git-cz"
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 提交代码",
-      "commit-msg": "commitlint -E $HUSKY_GIT_PARAMS",
-      "pre-push": "echo 提交代码前要先进行单元测试 && npm test"
+      "pre-commit": "echo 开始提交代码",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "echo 开始推送远程"
     }
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-angular": "^8.0.0",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "2.1.0",
     "husky": "^2.4.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
