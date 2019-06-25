@@ -172,7 +172,7 @@ yarn add commitizen --dev
 
 若只在项目级安装，则只能执行 `npm run commit`。如果全局安装过，则 `git cz` 和 `npm run commit` 都可以执行
 
-- **挑选 Adapter**
+- **挑选适配器（Adapter）**
 
 commitizen 有很多 Adapter 可以选择，他们提供了各种各样的提交规范模板，比如[cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog)（一个符合 Angular 团队规范的 preset），使用它可以帮助我们按照指定的规范生成 commit message
 
