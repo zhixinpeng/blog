@@ -4,6 +4,7 @@
 
 1. [Javascript 之正则表达式](./articles/Javascript正则表达式.md)
 2. [前端工程化之 Git Commit Message 规范校验及版本自动发布](./articles/前端工程化之commitMessage规范校验及版本自动发布.md)
+3. [JavaScriipt中的数据结构](./articles/JavaScript中的数据结构.md)
 
 ## 代码片段
 
