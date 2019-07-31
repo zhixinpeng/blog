@@ -1,4 +1,4 @@
-# 前端工程化之 Git Commit Message 规范校验及版本自动发布
+# CommitMessage规范校验及版本自动发布
 
 commit message 是开发的日常工作，写好日志不仅有助于他人 review，还可以有效的输出 CHANGELOG，对项目的管理实际至关重要，但是在实际工作中却常常被大家忽略。
 
