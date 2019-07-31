@@ -1,13 +1,13 @@
 # 目录
 
-## JavaScript
+## JavaScript系列文章
 
 1. [JavaScript正则表达式](./articles/Javascript正则表达式.md)
 2. [JavaScript数据结构](./articles/JavaScript数据结构.md)
 3. [JavaScript隐式类型转换](./articles/JavaScript隐式类型转换.md)
 4. [JavaScript模块化规范](./articles/JavaScript模块化规范.md)
 
-## 其他
+## 其他文章
 
 1. [CommitMessage规范校验及版本自动发布](./articles/CommitMessage规范校验及版本自动发布.md)
 
