@@ -5,6 +5,7 @@
 1. [JavaScript正则表达式](./articles/Javascript正则表达式.md)
 2. [JavaScript数据结构](./articles/JavaScript数据结构.md)
 3. [JavaScript隐式类型转换](./articles/JavaScript隐式类型转换.md)
+4. [JavaScript模块化规范](./articles/JavaScript模块化规范.md)
 
 ## 其他
 
@@ -23,8 +24,3 @@
 9. [手写promise](./demos/promise.js)
 10. [手写set](./demos/set.js)
 11. [Vue组件查找](./demos/vue-find-component.js)
-
-## Vue 源码解析
-
-1. [知识准备](./vue/1知识准备.md)
-2. [项目目录](./vue/2项目目录.md)
