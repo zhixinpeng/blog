@@ -4,7 +4,7 @@
  * 原地排序，空间复杂度O(1)，比归并排序使用更广泛
  * 平均时间复杂度基本接近O(nlogn)
  */
-class QuickSort {
+export class QuickSort {
   static sort(array: number[]): void {
     this.sortInternally(array, 0, array.length - 1);
   }
