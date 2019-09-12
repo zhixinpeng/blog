@@ -14,7 +14,7 @@ class BinaryFind {
     let low = 0;
     let high = length - 1;
     while (low <= high) {
-      const mid = low + ((high - low) >> 2)
+      const mid = low + ((high - low) >> 1)
       if (array[mid] > target) {
         high = mid - 1
       } else if (array[mid] < target) {
@@ -41,7 +41,7 @@ class BinaryFind {
     let low = 0
     let high = length - 1
     while (low <= high) {
-      const mid = low + ((high - low) >> 2)
+      const mid = low + ((high - low) >> 1)
       if (array[mid] > target) {
         high = mid - 1
       } else if (array[mid] > target) {
@@ -68,7 +68,7 @@ class BinaryFind {
     let low = 0
     let high = length - 1
     while (low <= high) {
-      const mid = low + ((high - low) >> 2)
+      const mid = low + ((high - low) >> 1)
       if (array[mid] < target) {
         low = mid + 1
       } else {
@@ -93,7 +93,7 @@ class BinaryFind {
     let low = 0
     let high = length - 1
     while (low <= high) {
-      const mid = low + ((high - low) >> 2)
+      const mid = low + ((high - low) >> 1)
       if (array[mid] > target) {
         high = mid - 1
       } else {
