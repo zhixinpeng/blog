@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue3数据响应式原理</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <button id="button">Press</button>
+  </body>
+  <script src="./reactive.js"></script>
+  <script>
+    const root = document.getElementById('app')
+    const button = document.getElementById('button')
+
+    const obj = { name: 'Angus', age: 1 }
+    const data = reactive(obj)
+
+    const double = computed(() => data.age * 2)
+
+    effect(() => {
+      console.log('数据变了', data.age)
+      root.innerHTML = `<h1>${data.name}今年${data.age}岁了，乘以2是${double.value}</h1>`
+    })
+
+    button.addEventListener(
+      'click',
+      () => {
+        data.age += 1
+      },
+      false
+    )
+  </script>
+  <script>
+    (function(a,h,c,b,f,g){a["UdeskApiObject"]=f;a[f]=a[f]||function(){(a[f].d=a[f].d||[]).push(arguments)};g=h.createElement(c);g.async=1;g.charset="utf-8";g.src=b;c=h.getElementsByTagName(c)[0];c.parentNode.insertBefore(g,c)})(window,document,"script","https://assets-cli.s2.udesk.cn/im_client/js/udeskApi.js","ud");
+    ud({
+        "code": "17b9fcc9",
+        "link": "http://1586194.udesk.cn/im_client?c_desc=test123456789&c_email=jiangst%40udesio.com&c_phone=15888888888&echostr=hello&nonce=cdebd5d13f4d331e&signature=693140534BDDDAF002A46F0027E06244DF0B21AB&timestamp=1457696747000&web_token=42f6607e-8892-4fcf-889b-f9babf627060"
+    });
+    </script>
+    
+</html>

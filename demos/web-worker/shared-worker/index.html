@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>共享线程 Shared Worker</title>
+  </head>
+  <body>
+    <button id="like">点赞</button>
+    <p>共收到了<span id="count">0</span>个赞</p>
+  </body>
+  <script>
+    let likes = 0
+    let likeBtn = document.querySelector('#like')
+    let countEle = document.querySelector('#count')
+
+    let worker = new SharedWorker('shared-worker.js')
+    worker.port.start()
+
+    likeBtn.addEventListener('click', function () {
+      worker.port.postMessage('like')
+    })
+
+    worker.port.onmessage = function (value) {
+      countEle.innerHTML = value.data
+    }
+  </script>
+</html>

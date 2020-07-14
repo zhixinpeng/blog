@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>专用线程 Dedicated Worker</title>
+  </head>
+  <body>
+    <script>
+      if (window.Worker) {
+        let worker = new Worker('worker-thread.js')
+        worker.onmessage = (e) => {
+          console.log(`Main: Received message - ${e.data}`)
+        }
+        worker.postMessage('PING')
+      } else {
+        console.log('不支持 Web Worker')
+      }
+    </script>
+  </body>
+</html>
