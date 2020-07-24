@@ -1,4 +1,44 @@
 /**
+ * 使用时间戳简单版本节流函数
+ * @param {*} func 执行函数
+ * @param {*} wait 延迟时间
+ */
+function throttle1(func, wait) {
+    let context, args
+    let previous = 0
+
+    return function () {
+        let now = +new Date()
+        context = this
+        args = arguments
+        if (now - previous > wait) {
+            func.apply(context, args)
+            previous = now
+        }
+    }
+}
+
+/**
+ * 使用定时器简单版本节流函数
+ * @param {*} func 执行函数
+ * @param {*} wait 延迟时间
+ */
+function throttle2(func, wait) {
+    let timeout
+
+    return function () {
+        context = this
+        args = arguments
+        if (!timeout) {
+            timeout = setTimeout(function () {
+                timeout = null
+                func.apply(context, args)
+            }, wait)
+        }
+    }
+}
+
+/**
  * 节流函数
  * @param {*} func 执行函数
  * @param {*} wait 延迟时间
