@@ -27,7 +27,7 @@ export class QuickSort {
     for (let i = index; i <= r; i++) {
       if (array[i] < pivot) {
         this.swap(array, index, i);
-        // 找到了比标记值晓得元素就移动分解点
+        // 找到了比标记值小得元素就移动分解点
         index++
       }
     }

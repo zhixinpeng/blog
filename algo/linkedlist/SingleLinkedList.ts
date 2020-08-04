@@ -43,7 +43,7 @@ class SingleLinkedList<T> implements List<T> {
     let p = this.head
 
     while (p.next !== null) {
-      if (p.next.value = value) return p.next
+      if (p.next.value === value) return p.next
       p = p.next
     }
 
