@@ -37,7 +37,7 @@ CSRF（Cross-site request forgery）跨站请求伪造：攻击者诱导用户�
 
 ### 防护策略
 
-- 组织不明外域的访问
+- 阻止不明外域的访问
   - 同源检查
   - Samesite Cookie
 - 提交时要求附加本域才能获取的信息
